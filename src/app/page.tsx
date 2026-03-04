@@ -4,6 +4,7 @@ import AboutSection from "@/components/AboutSection";
 import SocialContentSection from "@/components/SocialContentSection";
 import CinematicWorkSection from "@/components/CinematicWorkSection";
 import WorkTogetherSection from "@/components/WorkTogetherSection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <CinematicWorkSection />
 
       <WorkTogetherSection />
+      <Footer />
     </main>
   );
 }
