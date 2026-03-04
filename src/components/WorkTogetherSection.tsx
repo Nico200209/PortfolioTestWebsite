@@ -16,7 +16,7 @@ export default function WorkTogetherSection() {
       </h2>
 
       {/* Content row */}
-      <div className="flex flex-col md:flex-row gap-12 items-start relative">
+      <div className="flex flex-col md:flex-row gap-12 items-center relative">
         {/* Photo */}
         <div className="flex-shrink-0 relative w-[260px] h-[330px] rounded-xl overflow-hidden shadow-sm">
           <Image
