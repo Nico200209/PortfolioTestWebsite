@@ -28,9 +28,9 @@ export default function SocialContentSection() {
       {/* Scrollable carousel */}
       <div
         className="overflow-x-auto scrollbar-hide scroll-smooth snap-x snap-mandatory"
-        style={{ scrollPaddingLeft: "3rem" }}
+        style={{ scrollPaddingLeft: "3rem", scrollPaddingRight: "3rem" }}
       >
-      <div className="flex gap-4 pr-8 pb-2">
+      <div className="flex gap-4 pb-2">
         {projects.map((project, i) => (
           <div
             key={i}
@@ -55,6 +55,8 @@ export default function SocialContentSection() {
             </p>
           </div>
         ))}
+        {/* Trailing spacer: gap(1rem) + this(2rem) = 3rem, matching left margin */}
+        <div className="flex-shrink-0 w-8" aria-hidden="true" />
       </div>
       </div>
     </section>
