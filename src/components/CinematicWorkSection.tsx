@@ -13,8 +13,8 @@ const projects: CinematicProject[] = [
   { src: "/videos/cinematic/MaltaInSeptember.mp4", name: "Malta in September" },
   { src: "/videos/cinematic/MaltaThroughMyEyes.mp4", name: "Malta through my eyes" },
   { src: "/videos/cinematic/SummerInScheveningen.mp4", name: "Summer in Scheveningen" },
-  { src: "/videos/cinematic/cinematic-5.mp4", name: "project name" },
-  { src: "/videos/cinematic/cinematic-6.mp4", name: "project name" },
+  { src: "/videos/cinematic/SummerInUtrecht.mp4", name: "Summer in Utrecht" },
+  /* { src: "/videos/cinematic/cinematic-6.mp4", name: "project name" }, */
 ];
 
 export default function CinematicWorkSection() {
