@@ -5,7 +5,7 @@ import { IoCloseOutline } from "react-icons/io5";
 
 export interface SocialProject {
   name: string;
-  description: string;
+  description: string | string[];
   thumbnail: string;
   videos: string[];
 }
@@ -57,12 +57,17 @@ export default function SocialProjectModal({ project, onClose }: Props) {
           </h3>
 
           {/* Description */}
-          <p
-            className="text-sm leading-relaxed text-neutral-600 text-center px-8"
-            style={{ fontFamily: "var(--font-inter)" }}
-          >
-            {project.description}
-          </p>
+          <div className="flex flex-col gap-3 px-8">
+            {(Array.isArray(project.description) ? project.description : [project.description]).map((para, i) => (
+              <p
+                key={i}
+                className="text-sm leading-relaxed text-neutral-600 text-center"
+                style={{ fontFamily: "var(--font-inter)" }}
+              >
+                {para}
+              </p>
+            ))}
+          </div>
 
           {/* Videos */}
           {project.videos.length <= 3 ? (

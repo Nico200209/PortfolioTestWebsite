@@ -12,10 +12,13 @@ const projects: SocialProject[] = [
     videos: ["/videos/social/ugc/UGCPaidSocialMediabyZehra1.mp4", "/videos/social/ugc/UGCPaidSocialMediabyZehra2.mp4", "/videos/social/ugc/UGCPaidSocialMediabyZehra3.mp4"],
   },
   {
-    name: "project name",
-    description: "A short description of this project, what it was for and what you created.",
-    thumbnail: "/images/social/social-2.jpg",
-    videos: ["/videos/social/social-2-v1.mp4"],
+    name: "Wehkamp x PIECES x Tessa van Montfoort",
+    description: [
+      "Voor een collab tussen Wehkamp, PIECES en influencer Tessa van Montfoort heb ik (zonder briefings) super toffe beelden mogen omtoveren tot een aantal edits in een compleet nieuwe stijl die past bij beide merken én Tessa zelf.",
+      "Voor deze campagne heb ik vooral inspiratie genomen van Tessa's eigen socials en heb dit gecombineerd met de stijl van Wehkamp en PIECES en natuurlijk moest het ook in lijn zijn met de collectie die is uitgebracht. Hiervoor ben ik gegaan voor een vrolijke zomerse stijl.",
+    ],
+    thumbnail: "/images/social/pieces/PiecesPreview.png",
+    videos: ["/videos/social/pieces/PiecesVideo1.mp4", "/videos/social/pieces/PiecesVideo2.mp4", "/videos/social/pieces/PiecesVideo3.mp4"],
   },
   {
     name: "project name",
