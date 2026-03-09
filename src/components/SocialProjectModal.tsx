@@ -79,6 +79,7 @@ export default function SocialProjectModal({ project, onClose }: Props) {
                       ref={i === 0 ? firstVideoRef : undefined}
                       src={src}
                       controls
+                      controlsList="nodownload"
                       playsInline
                       preload="metadata"
                       className="w-full h-full object-contain"
@@ -100,6 +101,7 @@ export default function SocialProjectModal({ project, onClose }: Props) {
                         ref={i === 0 ? firstVideoRef : undefined}
                         src={src}
                         controls
+                      controlsList="nodownload"
                         playsInline
                         preload="metadata"
                         className="w-full h-full object-contain"

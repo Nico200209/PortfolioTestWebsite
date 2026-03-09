@@ -53,6 +53,7 @@ export default function CinematicModal({ src, name, onClose }: Props) {
             ref={videoRef}
             src={src}
             controls
+            controlsList="nodownload"
             playsInline
             preload="auto"
             className="w-full h-full object-contain"
