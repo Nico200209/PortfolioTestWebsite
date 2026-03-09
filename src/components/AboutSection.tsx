@@ -1,4 +1,8 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
+import AboutModal from "./AboutModal";
 
 const photos = [
   { src: "/about-1.png", alt: "Zehra portrait", rotate: "-rotate-6", z: "z-10" },
@@ -7,6 +11,8 @@ const photos = [
 ];
 
 export default function AboutSection() {
+  const [modalOpen, setModalOpen] = useState(false);
+
   return (
     <section
       id="about"
@@ -69,6 +75,7 @@ export default function AboutSection() {
 
       {/* CTA button */}
       <button
+        onClick={() => setModalOpen(true)}
         className="rounded-full px-8 py-3 text-sm tracking-wide text-white transition-opacity hover:opacity-80"
         style={{
           backgroundColor: "#DFACEA",
@@ -77,6 +84,8 @@ export default function AboutSection() {
       >
         more about me
       </button>
+
+      {modalOpen && <AboutModal onClose={() => setModalOpen(false)} />}
     </section>
   );
 }
