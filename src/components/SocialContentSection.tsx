@@ -39,10 +39,10 @@ const projects: SocialProject[] = [
     videos: ["/videos/social/unionriver/UnionRiverVideo1.mp4", "/videos/social/unionriver/UnionRiverVideo2.mp4", "/videos/social/unionriver/UnionRiverVideo3.mp4"],
   },
   {
-    name: "project name",
-    description: "A short description of this project, what it was for and what you created.",
-    thumbnail: "/images/social/social-6.jpg",
-    videos: ["/videos/social/social-6-v1.mp4"],
+    name: "Kleertjes & kletsen",
+    description: "Kleertjes & kletsen is een videoseries met presentatrice Roos die allerlei tips geeft over kleertjes, speelgoed en cadeau's aan alle mama's (en papa's) van Nederland.",
+    thumbnail: "/images/social/kleertjes/KleertjesPreview.png",
+    videos: ["/videos/social/kleertjes/KleertjesVideo1.mp4", "/videos/social/kleertjes/KleertjesVideo2.mp4"],
   },
   {
     name: "project name",
