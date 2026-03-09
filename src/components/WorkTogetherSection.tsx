@@ -20,7 +20,7 @@ export default function WorkTogetherSection() {
         {/* Photo */}
         <div className="flex-shrink-0 relative w-[260px] h-[330px] rounded-xl overflow-hidden shadow-sm">
           <Image
-            src="/work-together.jpg"
+            src="/images/work-together.jpg"
             alt="Zehra filming"
             fill
             className="object-cover"
@@ -61,7 +61,7 @@ export default function WorkTogetherSection() {
 
         {/* Heart sticker — flex child so it never overlaps text */}
         <div className="hidden lg:flex flex-shrink-0 items-center justify-center ml-auto">
-          <Image src="/ShapesHeart.png" alt="" width={140} height={140} className="object-contain" />
+          <Image src="/images/shapes/ShapesHeart.png" alt="" width={140} height={140} className="object-contain" />
         </div>
       </div>
     </section>

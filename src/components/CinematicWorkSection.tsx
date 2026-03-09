@@ -9,12 +9,12 @@ interface CinematicProject {
 }
 
 const projects: CinematicProject[] = [
-  { src: "/cinematic-1.mp4", name: "project name" },
-  { src: "/cinematic-2.mp4", name: "project name" },
-  { src: "/cinematic-3.mp4", name: "project name" },
-  { src: "/cinematic-4.mp4", name: "project name" },
-  { src: "/cinematic-5.mp4", name: "project name" },
-  { src: "/cinematic-6.mp4", name: "project name" },
+  { src: "/videos/cinematic/cinematic-1.mp4", name: "project name" },
+  { src: "/videos/cinematic/cinematic-2.mp4", name: "project name" },
+  { src: "/videos/cinematic/cinematic-3.mp4", name: "project name" },
+  { src: "/videos/cinematic/cinematic-4.mp4", name: "project name" },
+  { src: "/videos/cinematic/cinematic-5.mp4", name: "project name" },
+  { src: "/videos/cinematic/cinematic-6.mp4", name: "project name" },
 ];
 
 export default function CinematicWorkSection() {

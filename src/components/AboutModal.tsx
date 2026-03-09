@@ -46,7 +46,7 @@ export default function AboutModal({ onClose }: Props) {
           {/* Photo */}
           <div className="flex-shrink-0 relative w-full md:w-[260px] h-[280px] md:h-auto md:min-h-[500px] rounded-t-3xl md:rounded-l-3xl md:rounded-tr-none overflow-hidden">
             <Image
-              src="/about-modal.jpg"
+              src="/images/about/about-modal.jpg"
               alt="Zehra"
               fill
               className="object-cover object-top"

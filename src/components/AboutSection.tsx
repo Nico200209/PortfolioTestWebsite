@@ -5,9 +5,9 @@ import Image from "next/image";
 import AboutModal from "./AboutModal";
 
 const photos = [
-  { src: "/about-1.png", alt: "Zehra portrait", rotate: "-rotate-6", z: "z-10" },
-  { src: "/about-2.png", alt: "Zehra with camera", rotate: "rotate-1", z: "z-20", offset: "translate-y-8" },
-  { src: "/about-3.png", alt: "Zehra outdoors", rotate: "rotate-5", z: "z-10" },
+  { src: "/images/about/about-1.png", alt: "Zehra portrait", rotate: "-rotate-6", z: "z-10" },
+  { src: "/images/about/about-2.png", alt: "Zehra with camera", rotate: "rotate-1", z: "z-20", offset: "translate-y-8" },
+  { src: "/images/about/about-3.png", alt: "Zehra outdoors", rotate: "rotate-5", z: "z-10" },
 ];
 
 export default function AboutSection() {
@@ -39,7 +39,7 @@ export default function AboutSection() {
       <div className="relative flex items-center justify-center mb-16 px-16">
         {/* Left doodle */}
         <div className="absolute -left-8 md:-left-12 top-1/2 -translate-y-1/2">
-          <Image src="/ShapesArrow.png" alt="" width={120} height={120} className="object-contain" />
+          <Image src="/images/shapes/ShapesArrow.png" alt="" width={120} height={120} className="object-contain" />
         </div>
 
         {photos.map((photo, i) => (
@@ -58,7 +58,7 @@ export default function AboutSection() {
 
         {/* Right doodle */}
         <div className="absolute -right-8 md:-right-10 top-0 z-10">
-          <Image src="/ShapesSun.png" alt="" width={120} height={120} className="object-contain" />
+          <Image src="/images/shapes/ShapesSun.png" alt="" width={120} height={120} className="object-contain" />
         </div>
       </div>
 

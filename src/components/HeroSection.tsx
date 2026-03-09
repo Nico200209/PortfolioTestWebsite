@@ -24,7 +24,7 @@ export default function HeroSection() {
         preload="auto"
         className="absolute inset-0 w-full h-full object-cover"
       >
-        <source src="/ZomerhuisDuik.mp4" type="video/mp4" />
+        <source src="/videos/hero/ZomerhuisDuik.mp4" type="video/mp4" />
       </video>
 
       <div className="absolute inset-0 bg-black/45" />
