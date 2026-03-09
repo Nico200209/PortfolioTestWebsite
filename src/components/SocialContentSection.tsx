@@ -21,10 +21,10 @@ const projects: SocialProject[] = [
     videos: ["/videos/social/pieces/PiecesVideo1.mp4", "/videos/social/pieces/PiecesVideo2.mp4", "/videos/social/pieces/PiecesVideo3.mp4"],
   },
   {
-    name: "project name",
-    description: "A short description of this project, what it was for and what you created.",
-    thumbnail: "/images/social/social-3.jpg",
-    videos: ["/videos/social/social-3-v1.mp4", "/videos/social/social-3-v2.mp4", "/videos/social/social-3-v3.mp4"],
+    name: "Het Wehkamp Zomerhuis",
+    description: "Voor de campagne Het Wehkamp Zomerhuis hebben we een week lang allerlei content opgenomen in een gehuurd huisje. Ik was verantwoordelijk voor het editen van de content onder strakke deadlines en ook het filmen van sommige video's.",
+    thumbnail: "/images/social/zomerhuis/ZomerhuisPreview.png",
+    videos: ["/videos/social/zomerhuis/ZomerhuisVideo1.mp4", "/videos/social/zomerhuis/ZomerhuisVideo2.mp4", "/videos/social/zomerhuis/ZomerhuisVideo3.mp4"],
   },
   {
     name: "project name",
