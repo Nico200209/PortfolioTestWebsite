@@ -1,6 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { MdOutlineEmail } from "react-icons/md";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { IoCloseOutline } from "react-icons/io5";
 
 const navLinks = [
   { label: "About Me", href: "#about" },
@@ -35,11 +38,7 @@ export default function Navbar() {
           className="text-white p-1"
           aria-label="Open menu"
         >
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
-            <line x1="3" y1="6" x2="21" y2="6" />
-            <line x1="3" y1="12" x2="21" y2="12" />
-            <line x1="3" y1="18" x2="21" y2="18" />
-          </svg>
+          <RxHamburgerMenu size={22} />
         </button>
 
         <span
@@ -50,14 +49,11 @@ export default function Navbar() {
         </span>
 
         <a
-          href="mailto:hello@mediabyzehra.com"
+          href="mailto:mediabyzehra@gmail.com"
           className="text-white p-1"
           aria-label="Send email"
         >
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-            <rect x="2" y="4" width="20" height="16" rx="2" />
-            <polyline points="2,4 12,13 22,4" />
-          </svg>
+          <MdOutlineEmail size={24} />
         </a>
       </header>
 
@@ -72,10 +68,7 @@ export default function Navbar() {
           className="absolute top-7 right-8 text-white p-1"
           aria-label="Close menu"
         >
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
-            <line x1="18" y1="6" x2="6" y2="18" />
-            <line x1="6" y1="6" x2="18" y2="18" />
-          </svg>
+          <IoCloseOutline size={26} />
         </button>
 
         <nav className="flex flex-col items-center gap-10">

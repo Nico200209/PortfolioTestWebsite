@@ -16,7 +16,7 @@ export default function SocialContentSection() {
     <section
       id="social-content"
       className="py-14"
-      style={{ backgroundColor: "#7d3461" }}
+      style={{ backgroundColor: "#9C326B" }}
     >
       <h2
         className="text-3xl font-black text-white lowercase mb-6 px-12"
@@ -38,7 +38,7 @@ export default function SocialContentSection() {
             style={i === 0 ? { marginLeft: "3rem" } : undefined}
           >
             {/* Image card */}
-            <div className="relative w-full aspect-[2/3] rounded-xl overflow-hidden bg-[#d9d6d3]">
+            <div className="relative w-full aspect-[2/3] rounded-xl overflow-hidden bg-[#d9d6d3] transition-transform duration-300 ease-out hover:scale-105 hover:-translate-y-3">
               <Image
                 src={project.src}
                 alt={project.name}

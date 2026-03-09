@@ -5,7 +5,7 @@ export default function WorkTogetherSection() {
     <section
       id="work-together"
       className="py-20 px-12"
-      style={{ backgroundColor: "#e9e3d8" }}
+      style={{ backgroundColor: "#F0EBE6" }}
     >
       {/* Heading */}
       <h2
@@ -16,7 +16,7 @@ export default function WorkTogetherSection() {
       </h2>
 
       {/* Content row */}
-      <div className="flex flex-col md:flex-row gap-12 items-center relative">
+      <div className="flex flex-col md:flex-row gap-12 items-center">
         {/* Photo */}
         <div className="flex-shrink-0 relative w-[260px] h-[330px] rounded-xl overflow-hidden shadow-sm">
           <Image
@@ -47,55 +47,23 @@ export default function WorkTogetherSection() {
             free to reach out if you are looking for someone with a creative eye and a
             fresh approach.
           </p>
-          <button
-            className="self-start rounded-full border px-8 py-3 text-sm tracking-wide transition-colors hover:bg-[#c9a4bc]/10"
+          <a
+            href="mailto:mediabyzehra@gmail.com"
+            className="self-start rounded-full px-8 py-3 text-sm tracking-wide text-white transition-opacity hover:opacity-80"
             style={{
-              borderColor: "#c9a4bc",
-              color: "#7d3461",
+              backgroundColor: "#DFACEA",
               fontFamily: "var(--font-inter)",
             }}
           >
             get in contact
-          </button>
+          </a>
         </div>
 
-        {/* Heart doodle */}
-        <div className="hidden md:block absolute right-0 top-0">
-          <HeartDoodle />
+        {/* Heart sticker — flex child so it never overlaps text */}
+        <div className="hidden lg:flex flex-shrink-0 items-center justify-center ml-auto">
+          <Image src="/ShapesHeart.png" alt="" width={140} height={140} className="object-contain" />
         </div>
       </div>
     </section>
-  );
-}
-
-function HeartDoodle() {
-  return (
-    <svg
-      width="110"
-      height="110"
-      viewBox="0 0 110 110"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      {/* Outer heart shape */}
-      <path
-        d="M55 85 C55 85, 18 60, 18 38 C18 26, 27 18, 37 20 C44 22, 50 28, 55 34 C60 28, 66 22, 73 20 C83 18, 92 26, 92 38 C92 60, 55 85, 55 85 Z"
-        stroke="#9b7ab0"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        fill="#d8bce8"
-        fillOpacity="0.35"
-      />
-      {/* Signature Z inside */}
-      <path
-        d="M44 42 L62 42 L44 60 L62 60"
-        stroke="#7d3461"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        fill="none"
-      />
-    </svg>
   );
 }

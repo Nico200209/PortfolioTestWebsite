@@ -14,7 +14,7 @@ export default function CinematicWorkSection() {
     <section
       id="cinematic-work"
       className="py-14"
-      style={{ backgroundColor: "#e9e3d8" }}
+      style={{ backgroundColor: "#F0EBE6" }}
     >
       <h2
         className="text-3xl font-black text-black lowercase mb-6 px-12"
@@ -36,7 +36,7 @@ export default function CinematicWorkSection() {
               style={i === 0 ? { marginLeft: "3rem" } : undefined}
             >
               {/* Image card */}
-              <div className="relative w-full aspect-video rounded-xl overflow-hidden bg-[#d9d6d3]">
+              <div className="relative w-full aspect-video rounded-xl overflow-hidden bg-[#d9d6d3] transition-transform duration-300 ease-out hover:scale-105 hover:-translate-y-3">
                 <Image
                   src={project.src}
                   alt={project.name}
