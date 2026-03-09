@@ -3,7 +3,7 @@ import { FaTiktok, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 export default function Footer() {
   return (
     <footer
-      className="flex flex-col items-center justify-center gap-10 py-16 px-8"
+      className="flex flex-col items-center justify-center gap-6 py-10 px-8"
       style={{ backgroundColor: "#9C326B" }}
     >
       {/* Logo badge */}
