@@ -81,7 +81,7 @@ export default function SocialProjectModal({ project, onClose }: Props) {
                       controls
                       playsInline
                       preload="metadata"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                     />
                   </div>
                 </div>
@@ -102,7 +102,7 @@ export default function SocialProjectModal({ project, onClose }: Props) {
                         controls
                         playsInline
                         preload="metadata"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain"
                       />
                     </div>
                   </div>
