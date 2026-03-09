@@ -60,7 +60,7 @@ export default function CinematicModal({ src, name, onClose }: Props) {
         </div>
 
         <p
-          className="mt-3 text-sm font-bold text-white lowercase"
+          className="mt-3 text-sm font-bold text-white"
           style={{ fontFamily: "var(--font-inter)" }}
         >
           {name}
