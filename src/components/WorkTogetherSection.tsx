@@ -20,7 +20,7 @@ export default function WorkTogetherSection() {
         {/* Photo */}
         <div className="flex-shrink-0 relative w-[260px] h-[330px] rounded-xl overflow-hidden shadow-sm">
           <Image
-            src="/images/work-together.jpg"
+            src="/images/worktogether/work-together.jpg"
             alt="Zehra filming"
             fill
             className="object-cover"
