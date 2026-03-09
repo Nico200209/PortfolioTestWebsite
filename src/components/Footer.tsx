@@ -3,7 +3,7 @@ import { FaTiktok, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 export default function Footer() {
   return (
     <footer
-      className="flex flex-col items-center justify-center gap-6 py-10 px-8"
+      className="flex flex-col items-center justify-center gap-5 py-10 px-8"
       style={{ backgroundColor: "#9C326B" }}
     >
       {/* Logo badge */}
@@ -22,7 +22,7 @@ export default function Footer() {
       {/* Social icons */}
       <div className="flex gap-5">
         <a
-          href="https://tiktok.com"
+          href="https://www.tiktok.com/@mediabyzehra"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="TikTok"
@@ -32,7 +32,7 @@ export default function Footer() {
         </a>
 
         <a
-          href="https://instagram.com"
+          href="https://www.instagram.com/mediabyzehra/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"
@@ -42,7 +42,7 @@ export default function Footer() {
         </a>
 
         <a
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/in/zehraadiguzel/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
@@ -60,6 +60,14 @@ export default function Footer() {
       >
         mediabyzehra@gmail.com
       </a>
+
+            {/* Copyright */}
+      <p
+        className="text-white/60 text-xs"
+        style={{ fontFamily: "var(--font-inter)" }}
+      >
+        KvK nummer: 98059769
+      </p>
 
       {/* Copyright */}
       <p
