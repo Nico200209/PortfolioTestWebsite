@@ -33,10 +33,10 @@ const projects: SocialProject[] = [
     videos: ["/videos/social/vriendjes/VriendjesVideo1.mp4", "/videos/social/vriendjes/VriendjesVideo2.mp4", "/videos/social/vriendjes/VriendjesVideo3.mp4"],
   },
   {
-    name: "project name",
-    description: "A short description of this project, what it was for and what you created.",
-    thumbnail: "/images/social/social-5.jpg",
-    videos: ["/videos/social/social-5-v1.mp4", "/videos/social/social-5-v2.mp4"],
+    name: "Union River",
+    description: "Het merk Union River is gefocust op fashion voor jonge mannen. Voor dit merk heb ik vooral TikTok's geëdit omdat de doelgroep daar het beste was te bereiken.",
+    thumbnail: "/images/social/unionriver/UnionRiverPreview.png",
+    videos: ["/videos/social/unionriver/UnionRiverVideo1.mp4", "/videos/social/unionriver/UnionRiverVideo2.mp4", "/videos/social/unionriver/UnionRiverVideo3.mp4"],
   },
   {
     name: "project name",
