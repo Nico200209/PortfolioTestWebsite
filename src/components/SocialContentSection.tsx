@@ -6,10 +6,10 @@ import SocialProjectModal, { SocialProject } from "./SocialProjectModal";
 
 const projects: SocialProject[] = [
   {
-    name: "project name",
-    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. lorem ipsum dolor sit amet, consectetur adipiscing elit. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    thumbnail: "/images/social/social-1.jpg",
-    videos: ["/videos/social/social-1-v1.mp4", "/videos/social/social-1-v2.mp4", "/videos/social/social-1-v3.mp4", "/videos/social/social-1-v4.mp4", "/videos/social/social-1-v5.mp4"],
+    name: "UGC Paid Social",
+    description: "Omdat authentieke content het beste werkt, combineer ik de losse 'look & feel' van UGC met strakke marketingprincipes. Mijn focus ligt op retentie: de kijker vasthouden. Door strategische editing met wisselende hooks en CTA's creëer ik video's die natuurlijk aanvoelen én ook performen.",
+    thumbnail: "/images/social/ugc/ugcpreview.png",
+    videos: ["/videos/social/ugc/UGCPaidSocialMediabyZehra1.mp4", "/videos/social/ugc/UGCPaidSocialMediabyZehra2.mp4", "/videos/social/ugc/UGCPaidSocialMediabyZehra3.mp4"],
   },
   {
     name: "project name",
@@ -95,7 +95,7 @@ export default function SocialContentSection() {
               </div>
               {/* Label */}
               <p
-                className="mt-2 text-sm font-bold text-white lowercase"
+                className="mt-2 text-sm font-bold text-white"
                 style={{ fontFamily: "var(--font-inter)" }}
               >
                 {project.name}
