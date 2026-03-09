@@ -38,7 +38,7 @@ export default function AboutSection() {
       {/* Photos + doodles */}
       <div className="relative flex items-center justify-center mb-16 px-16">
         {/* Left doodle */}
-        <div className="absolute -left-8 md:-left-12 top-1/2 -translate-y-1/2">
+        <div className="absolute -left-8 md:-left-12 top-1/2 -translate-y-1/2 hidden lg:block">
           <Image src="/images/shapes/ShapesArrow.png" alt="" width={120} height={120} className="object-contain" />
         </div>
 
@@ -57,7 +57,7 @@ export default function AboutSection() {
         ))}
 
         {/* Right doodle */}
-        <div className="absolute -right-8 md:-right-10 top-0 z-10">
+        <div className="absolute -right-8 md:-right-10 top-0 z-10 hidden lg:block">
           <Image src="/images/shapes/ShapesSun.png" alt="" width={120} height={120} className="object-contain" />
         </div>
       </div>

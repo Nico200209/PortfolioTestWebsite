@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Image from "next/image";
+import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 import SocialProjectModal, { SocialProject } from "./SocialProjectModal";
 
 const projects: SocialProject[] = [
@@ -44,22 +45,28 @@ const projects: SocialProject[] = [
     thumbnail: "/images/social/kleertjes/KleertjesPreview.png",
     videos: ["/videos/social/kleertjes/KleertjesVideo1.mp4", "/videos/social/kleertjes/KleertjesVideo2.mp4"],
   },
-/*   {
-    name: "project name",
-    description: "A short description of this project, what it was for and what you created.",
-    thumbnail: "/images/social/social-7.jpg",
-    videos: ["/videos/social/social-7-v1.mp4"],
-  },
-  {
-    name: "project name",
-    description: "A short description of this project, what it was for and what you created.",
-    thumbnail: "/images/social/social-8.jpg",
-    videos: ["/videos/social/social-8-v1.mp4"],
-  }, */
 ];
 
 export default function SocialContentSection() {
   const [selected, setSelected] = useState<SocialProject | null>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const preloadCache = useRef<Set<string>>(new Set());
+
+  const preloadVideos = (project: SocialProject) => {
+    project.videos.forEach((src) => {
+      if (preloadCache.current.has(src)) return;
+      preloadCache.current.add(src);
+      const v = document.createElement("video");
+      v.preload = "auto";
+      v.src = src;
+    });
+  };
+
+  const scroll = (dir: "left" | "right") => {
+    const el = scrollRef.current;
+    if (!el) return;
+    el.scrollBy({ left: dir === "right" ? 320 : -320, behavior: "smooth" });
+  };
 
   return (
     <section
@@ -67,15 +74,35 @@ export default function SocialContentSection() {
       className="py-14"
       style={{ backgroundColor: "#9C326B" }}
     >
-      <h2
-        className="text-3xl font-black text-white lowercase mb-6 px-12"
-        style={{ fontFamily: "var(--font-inter)" }}
-      >
-        social content
-      </h2>
+      {/* Header row with arrows */}
+      <div className="flex items-center justify-between px-12 mb-6">
+        <h2
+          className="text-3xl font-black text-white lowercase"
+          style={{ fontFamily: "var(--font-inter)" }}
+        >
+          social content
+        </h2>
+        <div className="flex gap-2">
+          <button
+            onClick={() => scroll("left")}
+            aria-label="Scroll left"
+            className="w-9 h-9 rounded-full bg-white/20 hover:bg-white/35 transition-colors flex items-center justify-center text-white"
+          >
+            <IoChevronBack size={18} />
+          </button>
+          <button
+            onClick={() => scroll("right")}
+            aria-label="Scroll right"
+            className="w-9 h-9 rounded-full bg-white/20 hover:bg-white/35 transition-colors flex items-center justify-center text-white"
+          >
+            <IoChevronForward size={18} />
+          </button>
+        </div>
+      </div>
 
       {/* Scrollable carousel */}
       <div
+        ref={scrollRef}
         className="overflow-x-auto scrollbar-hide scroll-smooth snap-x snap-mandatory"
         style={{ scrollPaddingLeft: "3rem", scrollPaddingRight: "3rem" }}
       >
@@ -85,6 +112,7 @@ export default function SocialContentSection() {
               key={i}
               className="flex-shrink-0 snap-start snap-always w-[calc((100vw-3rem)/2-1rem)] md:w-[calc((100vw-3rem)/3.5-1rem)] lg:w-[calc((100vw-3rem)/4.5-1rem)] cursor-pointer"
               style={i === 0 ? { marginLeft: "3rem" } : undefined}
+              onMouseEnter={() => preloadVideos(project)}
               onClick={() => setSelected(project)}
             >
               {/* Image card */}

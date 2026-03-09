@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
+import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 import CinematicModal from "./CinematicModal";
 
 interface CinematicProject {
@@ -20,6 +21,13 @@ const projects: CinematicProject[] = [
 export default function CinematicWorkSection() {
   const [selected, setSelected] = useState<CinematicProject | null>(null);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (dir: "left" | "right") => {
+    const el = scrollRef.current;
+    if (!el) return;
+    el.scrollBy({ left: dir === "right" ? 480 : -480, behavior: "smooth" });
+  };
 
   return (
     <section
@@ -27,15 +35,35 @@ export default function CinematicWorkSection() {
       className="py-14"
       style={{ backgroundColor: "#F0EBE6" }}
     >
-      <h2
-        className="text-3xl font-black text-black lowercase mb-6 px-12"
-        style={{ fontFamily: "var(--font-inter)" }}
-      >
-        cinematic work
-      </h2>
+      {/* Header row with arrows */}
+      <div className="flex items-center justify-between px-12 mb-6">
+        <h2
+          className="text-3xl font-black text-black lowercase"
+          style={{ fontFamily: "var(--font-inter)" }}
+        >
+          cinematic work
+        </h2>
+        <div className="flex gap-2">
+          <button
+            onClick={() => scroll("left")}
+            aria-label="Scroll left"
+            className="w-9 h-9 rounded-full bg-black/10 hover:bg-black/20 transition-colors flex items-center justify-center text-black"
+          >
+            <IoChevronBack size={18} />
+          </button>
+          <button
+            onClick={() => scroll("right")}
+            aria-label="Scroll right"
+            className="w-9 h-9 rounded-full bg-black/10 hover:bg-black/20 transition-colors flex items-center justify-center text-black"
+          >
+            <IoChevronForward size={18} />
+          </button>
+        </div>
+      </div>
 
       {/* Scrollable carousel */}
       <div
+        ref={scrollRef}
         className="overflow-x-auto scrollbar-hide scroll-smooth snap-x snap-mandatory"
         style={{ scrollPaddingLeft: "3rem" }}
       >
