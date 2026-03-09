@@ -27,10 +27,10 @@ const projects: SocialProject[] = [
     videos: ["/videos/social/zomerhuis/ZomerhuisVideo1.mp4", "/videos/social/zomerhuis/ZomerhuisVideo2.mp4", "/videos/social/zomerhuis/ZomerhuisVideo3.mp4"],
   },
   {
-    name: "project name",
-    description: "A short description of this project, what it was for and what you created.",
-    thumbnail: "/images/social/social-4.jpg",
-    videos: ["/videos/social/social-4-v1.mp4"],
+    name: "Vriendjes van kleertjes",
+    description: "Vriendjes van kleertjes is een videoserie waarin het draait om kinderen en hun soms wat gekke antwoorden…",
+    thumbnail: "/images/social/vriendjes/VriendjesPreview.png",
+    videos: ["/videos/social/vriendjes/VriendjesVideo1.mp4", "/videos/social/vriendjes/VriendjesVideo2.mp4", "/videos/social/vriendjes/VriendjesVideo3.mp4"],
   },
   {
     name: "project name",
