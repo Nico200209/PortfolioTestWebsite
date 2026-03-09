@@ -9,7 +9,7 @@ interface CinematicProject {
 }
 
 const projects: CinematicProject[] = [
-  { src: "/videos/cinematic/cinematic-1.mp4", name: "project name" },
+  { src: "/videos/cinematic/PuertoPlata15Seconds.mp4", name: "DR Puerto Plata in 15 seconds" },
   { src: "/videos/cinematic/cinematic-2.mp4", name: "project name" },
   { src: "/videos/cinematic/cinematic-3.mp4", name: "project name" },
   { src: "/videos/cinematic/cinematic-4.mp4", name: "project name" },
