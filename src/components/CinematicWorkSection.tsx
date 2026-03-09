@@ -1,15 +1,26 @@
-import Image from "next/image";
+"use client";
 
-const projects = [
-  { src: "/cinematic-1.jpg", name: "project name" },
-  { src: "/cinematic-2.jpg", name: "project name" },
-  { src: "/cinematic-3.jpg", name: "project name" },
-  { src: "/cinematic-4.jpg", name: "project name" },
-  { src: "/cinematic-5.jpg", name: "project name" },
-  { src: "/cinematic-6.jpg", name: "project name" },
+import { useState, useRef } from "react";
+import CinematicModal from "./CinematicModal";
+
+interface CinematicProject {
+  src: string;
+  name: string;
+}
+
+const projects: CinematicProject[] = [
+  { src: "/cinematic-1.mp4", name: "project name" },
+  { src: "/cinematic-2.mp4", name: "project name" },
+  { src: "/cinematic-3.mp4", name: "project name" },
+  { src: "/cinematic-4.mp4", name: "project name" },
+  { src: "/cinematic-5.mp4", name: "project name" },
+  { src: "/cinematic-6.mp4", name: "project name" },
 ];
 
 export default function CinematicWorkSection() {
+  const [selected, setSelected] = useState<CinematicProject | null>(null);
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+
   return (
     <section
       id="cinematic-work"
@@ -26,22 +37,27 @@ export default function CinematicWorkSection() {
       {/* Scrollable carousel */}
       <div
         className="overflow-x-auto scrollbar-hide scroll-smooth snap-x snap-mandatory"
-        style={{ scrollPaddingLeft: "3rem", scrollPaddingRight: "3rem" }}
+        style={{ scrollPaddingLeft: "3rem" }}
       >
         <div className="flex gap-4 pb-2">
           {projects.map((project, i) => (
             <div
               key={i}
-              className="flex-shrink-0 snap-start snap-always w-[calc((100vw-3rem)/1.2-1rem)] md:w-[calc((100vw-3rem)/2-1rem)] lg:w-[calc((100vw-3rem)/2.5-1rem)]"
+              className="flex-shrink-0 snap-start snap-always w-[calc((100vw-3rem)/1.2-1rem)] md:w-[calc((100vw-3rem)/2-1rem)] lg:w-[calc((100vw-3rem)/2.5-1rem)] cursor-pointer"
               style={i === 0 ? { marginLeft: "3rem" } : undefined}
+              onClick={() => setSelected(project)}
             >
-              {/* Image card */}
+              {/* Video card */}
               <div className="relative w-full aspect-video rounded-xl overflow-hidden bg-[#d9d6d3] transition-transform duration-300 ease-out hover:scale-105 hover:-translate-y-3">
-                <Image
+                <video
+                  ref={(el) => { videoRefs.current[i] = el; }}
                   src={project.src}
-                  alt={project.name}
-                  fill
-                  className="object-cover"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="auto"
+                  className="w-full h-full object-cover"
                 />
               </div>
               {/* Label */}
@@ -57,6 +73,14 @@ export default function CinematicWorkSection() {
           <div className="flex-shrink-0 w-8" aria-hidden="true" />
         </div>
       </div>
+
+      {selected && (
+        <CinematicModal
+          src={selected.src}
+          name={selected.name}
+          onClose={() => setSelected(null)}
+        />
+      )}
     </section>
   );
 }
