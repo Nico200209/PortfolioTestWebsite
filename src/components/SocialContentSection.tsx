@@ -44,7 +44,7 @@ const projects: SocialProject[] = [
     thumbnail: "/images/social/kleertjes/KleertjesPreview.png",
     videos: ["/videos/social/kleertjes/KleertjesVideo1.mp4", "/videos/social/kleertjes/KleertjesVideo2.mp4"],
   },
-  {
+/*   {
     name: "project name",
     description: "A short description of this project, what it was for and what you created.",
     thumbnail: "/images/social/social-7.jpg",
@@ -55,7 +55,7 @@ const projects: SocialProject[] = [
     description: "A short description of this project, what it was for and what you created.",
     thumbnail: "/images/social/social-8.jpg",
     videos: ["/videos/social/social-8-v1.mp4"],
-  },
+  }, */
 ];
 
 export default function SocialContentSection() {
